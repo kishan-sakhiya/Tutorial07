@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tutorial 07</string>
+    <string-array name="spiBranch">
+        <item>Select</item>
+        <item>B.C.A.</item>
+        <item>M.C.A.</item>
+        <item>B.Tech</item>
+        <item>M.Tech</item>
+    </string-array>
+</resources>

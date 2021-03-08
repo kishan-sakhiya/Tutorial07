@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEBEE"
+    tools:context=".Register_Activity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration Here"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#80deea"
+            android:textAllCaps="true"
+            android:gravity="center_horizontal"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edtFname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="start"
+            android:paddingStart="15dp"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"
+            android:hint="Enter First Name"
+            android:paddingLeft="15dp" />
+
+        <EditText
+            android:id="@+id/edtLname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:gravity="left"
+            android:paddingStart="15dp"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"
+            android:hint="Enter Last Name"
+            android:paddingLeft="15dp" />
+
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="left"
+            android:textSize="18sp"
+            android:paddingStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"
+            android:hint="Enter Username"
+            android:paddingLeft="15dp" />
+
+         <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="left"
+            android:textSize="18sp"
+             android:paddingStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"
+            android:hint="Enter Password"
+             android:paddingLeft="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:text="Branch" />
+
+            <Spinner
+                android:id="@+id/selSpi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:entries="@array/spiBranch"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:gravity="center_horizontal"
+                android:padding="8dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textSize="18sp"
+                android:text="Gender" />
+
+            <RadioGroup
+                android:id="@+id/rdoGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/rdoMale"
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/rdoFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_margin="5dp"
+                    android:text="Female" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:onClick="insertvalue"
+            android:padding="8dp"
+            android:text="Registration"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:onClick="getData"
+            android:padding="8dp"
+            android:text="Display"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/txtDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#80deea"
+            android:textAllCaps="true"
+            android:gravity="center_horizontal"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
